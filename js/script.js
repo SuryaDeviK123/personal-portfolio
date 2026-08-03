@@ -15,3 +15,23 @@ const footer = document.querySelector("footer p");
 if (footer) {
     footer.innerHTML = `© ${new Date().getFullYear()} Kadali Surya Devi | All Rights Reserved`;
 }
+
+const themeBtn = document.getElementById("theme-toggle");
+
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-theme");
+
+    if(document.body.classList.contains("light-theme")){
+
+        themeBtn.innerHTML = "☀️";
+
+    }
+
+    else{
+
+        themeBtn.innerHTML = "🌙";
+
+    }
+
+});
